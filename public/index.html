@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="description" content="Training app to track current and future workouts">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Personal Training Planner</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
+	<script src="https://use.fontawesome.com/5cc30cf6d4.js"></script>
+	<link rel="stylesheet" href="css/normalize.css">
+   	<link rel="stylesheet" href="css/grid.css">
+   	<link rel="stylesheet" href="css/main.css">
+   	<link rel="shortcut icon" href="../images/leaf.png">
+</head>
+
+<body>
+	<div class="content">
+		<header class="row">
+			<h1 class="col-9">TrainMe</h1>
+			<a href="index.html" class="col-3 logout" style="display:none">Logout</a>
+		</header>
+
+		<section class="login-section">
+			<h2>Ready to Train?</h2>
+			<p>Keep track of your training season!</p>
+			<button type="submit" id="login-button">Log In</button>
+			<button type="submit" id="register-button">Register</button>
+		</section>
+
+		<section class="row detail-section">
+			<div class="col-4">
+				<i class="fa fa-calendar" aria-hidden="true"></i>
+				<p>Build your Program</p>
+			</div>
+			<div class="col-4">
+				<i class="fa fa-sun-o"></i>
+				<p>Track progress from start to finish</p>
+			</div>
+			<div class="col-4">
+				<i class="fa fa-pencil"></i>
+				<p>Journal your thoughts, feelings, and experiences</p>
+			</div>
+		</section>
+
+		<section class="row" id="login-page">
+			<h2>Log In</h2>
+			<form id="loginForm">
+				<label for="GET-username">Username:</label>
+				<input type="text" name="GET-username" id="GET-username" placeholder="myname@gmail.com" required>
+				<label for="GET-password">Password:</label>
+				<input type="password" name="GET-password" id="GET-password" placeholder="password" required>
+				<button type="submit" id="sign-in">Sign In</button>
+				<p>Not a registered user?  <a href="#" id="register-link">Sign up</a> now!</p>
+				<p class="demo">For demo: <br>username: tester <br>password: testertester</p>
+			</form>
+		</section>
+
+		<section class="row" id="register-page">
+			<h2>Register</h2>
+			<form id="registerForm">
+				<label for="firstName" required>First Name:</label>
+				<input type="text" name="firstName" id="firstName" placeholder="First Name">
+				<label for="lastName">Last Name:</label>
+				<input type="text" name="lastName" id="lastName" placeholder="Last Name">
+				<label for="POST-username">Select username:</label>
+				<input type="text" name="POST-username" id="POST-username" placeholder="myname@gmail.com" required>
+				<label for="POST-password">Enter password:  <span id="errorTenChar"></span></label>
+				<input type="password" name="POST-password" id="POST-password" placeholder="password" required>
+				<label for="retype-password">Retype password:  <span id="errorMatchPass"></span></label>
+				<input type="password" name="retype-password" id="retype-password" placeholder="password" required>
+				<button type="submit" id="sign-up">Sign-me up!</button>
+			</form>
+		</section>
+
+		<section class="row home" style="display:none">
+			<h2>Hello <span id="showName"></span>, look what you have growing on today!</h2>
+		</section>
+
+		<section class="row workoutDetails" style="display:none">
+			<div class="col-6 workoutColumn">
+				<h2>Build Your Workout</h2>
+				<button type="submit" id="add-workout" class="homePageButtons">Add a session</button>
+				<button type="submit" id="cancel-add-workout" class="homePageButtons" style="display:none">Cancel</button>
+
+				<form id="addPlantSection" style="display:none" class="row">
+					<h3>What do you want to add?</h3>
+					<label for="addWorkoutName">Session:</label>
+					<input type="text" name="addWorkoutName" id="addWorkoutName" placeholder="Tempo Run" required>
+					<label for="addStartDate">Session Time:</label>
+					<input type="text" name="addStartDate" id="addStartDate" placeholder="mm/dd/yyyy" required>
+					<label for="addHarvestDate">Finish Time:</label>
+					<input type="text" name="addFinishDate" id="addFinishDate" placeholder="mm/dd/yyyy">
+					<label for="addComments">Comments:</label>
+					<input type="text" name="addComments" id="addComments" placeholder="Intervals">
+					<button type="submit" id="addWorkoutInfo" class="homePageButtons">Add it!</button>
+				</form>
+
+				<div class="workoutListSection"></div>
+			</div>
+
+			<div class="col-6 journalColumn">
+				<h2>Journal</h2>
+				<button type="submit" id="add-journal-entry" class="homePageButtons">Add entry</button>
+				<button type="submit" id="cancel-journal-entry" class="homePageButtons" style="display:none">Cancel</button>
+
+				<form id="addJournalSection" style="display:none" class="row">
+					<h3>What's new today?</h3>
+					<textarea rows="5" type="text" name="newJournalEntry" id="newJournalEntry" placeholder="Write something!" required></textarea>
+					<button type="submit" id="addJournalEntry" class="homePageButtons">Add it!</button>
+				</form>
+
+				<div class="journalSection col-6"></div>
+			</div>
+		</section>
+	</div>
+
+	<footer class="row">
+		<p>&copy Rachel Bennett</p>
+		<p>Favicon made by <a href="http://www.freepik.com/">Freepik</a> from <a href="www.flaticon.com">www.flaticon.com</a></p>
+	</footer>
+
+ 	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+   	<script src="app.js"></script>
+</body>
+</html>

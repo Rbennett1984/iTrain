@@ -1,0 +1,350 @@
+/***** CSS RESET *****/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+    /*  CHROME  */
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0px;
+    -webkit-padding-after: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
+}
+
+/***** GENERAL STYLES *****/
+
+html, body {
+	height: 100%;
+}
+
+body {
+	background-color: #F9F9F9;
+	color: #2C363F;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 18px;
+	display: flex;
+	flex-direction: column;
+}
+
+a {
+	text-decoration: none;
+	color: #890620;
+}
+
+a:hover {
+	font-weight: 600;
+}
+
+a:visited {
+	color: #890620;
+}
+
+button {
+	background-color: #E8C547;
+	height: 3rem;
+	width: 8rem;
+	margin-bottom: 1rem;
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	border-radius: 5px;
+}
+
+button:hover {
+	cursor: pointer;
+	background-color: #d6b540;	
+}
+
+form {
+	margin: 0 auto;
+	text-align: left;
+}
+
+input, textarea {
+	height: 2.5rem;
+	border-radius: 5px;
+	padding-left: 1rem;
+	display: block;
+	width: 100%;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+	font-family: 'Montserrat', sans-serif;
+}
+
+input::placeholder
+textarea::placeholder {
+	padding-left: 0.5rem;
+	color: #B2B5B9;
+}
+
+footer {
+	margin-top: 1rem;
+	text-align: center;	
+	padding-bottom: 1rem;
+	font-size: 0.8rem;
+}
+
+/***** INDEX *****/
+
+.content {
+	flex: 1 0 auto;
+}
+
+#loginForm p {
+	margin-top: 1rem;
+	text-align: center;
+}
+
+.login-section, .detail-section {
+	text-align: center;
+}
+
+.login-section {
+	color: #F9F9F9;
+	background-image: url("https://images.pexels.com/photos/903171/pexels-photo-903171.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+	padding-top: 10rem;
+	padding-bottom: 10rem;
+}
+
+.login-section h2 {
+	font-size: 4rem;
+	padding-bottom: 1rem;
+	color: slategray;
+}
+
+.login-section p {
+	font-size: 1.5rem;
+	padding-bottom: 1rem;
+	color: slategray;
+}
+
+.login-section button {
+	font-size: 1.5rem;
+	margin: 1rem;
+}
+
+.detail-section {
+	margin-top: 3rem;
+	margin-bottom: 1.5rem;
+}
+/*find*/
+.detail-section p {
+	margin: 1rem;
+}
+
+.demo {
+	color: #828487;
+	margin-bottom: 1rem;
+}
+
+.fa {
+	margin-bottom: 1rem;
+	padding: 2rem;
+	font-size: 4rem;
+	border: 1px solid #2C363F;
+	border-radius: 50%;
+}
+
+.fa-calendar {
+	color: #0E8358;
+}
+
+.fa-sun-o {
+	color: #E8C547;
+}
+
+.fa-pencil {
+	color: #2C363F;
+}
+
+/***** LOG-IN/REGISTER PAGE *****/
+
+#login-form, #register-form {
+	margin: 0.5rem;
+}
+
+#login-page, #register-page {
+	margin-top: 2rem;
+	text-align: center;
+	width: 60%;
+}
+
+#login-page h2 {
+	font-size: 2rem;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+#register-page h2 {
+	font-size: 2rem;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+#sign-up,
+#sign-in {
+	margin-bottom: 1rem;
+	display: block;
+	width: 100%;
+	margin-left: 0;
+}
+
+#errorTenChar,
+#errorMatchPass {
+	color: red;
+}
+
+/***** HOME *****/
+
+.home h2 {
+	border-bottom: 1px solid #890620;
+	padding-bottom: 1rem;
+	font-weight: 400;
+}
+
+.logout {
+	margin-top: 2rem;
+	text-align: right;
+}
+
+#showName {
+	font-weight: 600;
+}
+
+/***** WORKOUT SECTION *****/
+
+.sessionDetails {
+	margin-top: 1rem;
+	height: 100%;
+}
+
+.sessionDetails h2 {
+	display: inline-block;
+	font-size: 1.8rem;
+	margin-top: 1rem;
+}
+
+.workoutColumn,
+.journalColumn {
+	border-radius: 5px;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.journalColumn {
+	background-color: #2C363F;
+	color: #F9F9F9;
+	box-shadow: 2px 2px grey;
+}
+
+.workoutColumn {
+	margin-right: 1rem;
+	background-color: ;
+}
+
+.workoutItem, {
+	margin-top: 1rem;
+	font-size: 1.2rem;
+	width: 100%;
+}
+
+.workoutName,
+.journalDateAndTime {
+	height: 2.5rem;
+	vertical-align: middle;
+	font-size: 1.6rem;
+}
+
+.workoutName:hover,
+.journalDateAndTime:hover {
+	cursor: pointer;
+}
+
+.workoutInfo,
+.journalInfo {
+	padding-top: 1rem;
+	border-top: 1px solid #0E8358;
+}
+
+.workoutInfo button,
+.journalItem button {
+	margin-top: 1rem;
+}
+
+#addWorkoutSection,
+#addJournalSection {
+	margin-top: 1.5rem;
+	margin-left: 0;
+}
+
+#add-workout,
+#add-journal-entry {
+	display: inline-block;
+	margin: 1rem;
+}
+
+#add-journal-entry,
+#cancel-journal-entry,
+#addJournalEntry,
+.updateJournal,
+.deleteJournal {
+	background-color: #65B094;
+}
+
+#updateWorkoutSection {
+	margin-top: 1rem;
+	margin-left: 0;
+}
+
+.homePageButtons {
+	height: 2rem;
+	width: 7rem;
+	font-size: 1rem;
+}
+
+#addPlantInfo, 
+#addJournalEntry {
+	margin-right: 1rem;
+	margin-bottom: 1rem;
+}
+
+.updateWorkout,
+.updateJournal {
+	margin-right: 1rem;
+	display: inline-block;
+	margin-bottom: 1rem;
+}
+
+#updateJournalInfo {
+	margin-bottom: 1rem;
+}
+
+.deleteWorkout,
+.deleteJournal {
+	display: inline-block;
+	margin-bottom: 1rem
+}
+
+/***** JOURNAL SECTION *****/
+
+#newJournalEntry {
+	height: 
+}
+
+.journalSection {
+	display: block;
+	width: 100%;
+}
+
+/***** MEDIA QUERIES *****/
+
+@media only screen and (max-width: 568px) {
+	.workoutItem {
+		width: 100%;
+	}
+}
