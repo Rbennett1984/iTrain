@@ -533,7 +533,7 @@ $(document).ready(function() {
 plant
 
 
-let promiseToTrainToday = Promise(function(resolve, reject) {
+/*let promiseToTrainToday = Promise(function(resolve, reject) {
 
     //promise to train everyday
 
